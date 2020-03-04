@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!-- RÃ©cupÃ©rer les Apache Taglibs Impl, Spec et EL, et les coller dans WebContent/WEB-INF/lib -->
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Liste des assurés uniques</title>
+<title>Liste des assurÃ©s uniques</title>
 </head>
 <body>
-	<a href="index.jsp">Retour au début</a>
+	<a href="index.jsp">Retour au dÃ©but</a>
 	<br>
 	<h1>
-		<a href="AssureUniqueServlet">Liste des assurés uniques</a>
+		<a href="AssureUniqueServlet">Liste des assurÃ©s uniques</a>
 	</h1>
 
 	<table border=1 cellpadding=5 cellspacing=0>
@@ -19,7 +20,7 @@
 			<th><a href="AssureUniqueServlet?action=order&column=nomNaissance">Nom de naissance</a> <c:if test="${ pager.sortColumn == 'nomNaissance' }">
 					${ pager.descendingSort ? 'desc':'asc' }
 				</c:if></th>
-			<th><a href="AssureUniqueServlet?action=order&column=prenomNaissance">Prénom de naissance</a> <c:if
+			<th><a href="AssureUniqueServlet?action=order&column=prenomNaissance">PrÃ©nom de naissance</a> <c:if
 					test="${ pager.sortColumn == 'prenomNaissance' }">
 					${ pager.descendingSort ? 'desc':'asc' }
 				</c:if></th>
@@ -43,7 +44,7 @@
 	</table>
 
 	<c:if test="${ pager.hasPrevious() }">
-		<a href="AssureUniqueServlet?action=previous">Enregistrements précédents</a>
+		<a href="AssureUniqueServlet?action=previous">Enregistrements prÃ©cÃ©dents</a>
 	</c:if>
 	<c:if test="${ pager.hasPrevious() == pager.hasNext() }"> | </c:if>
 	<c:if test="${ pager.hasNext() }">
